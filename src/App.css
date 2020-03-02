@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+/* Style the header */
+header {
+    background-color: #AAA;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 15%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+article {
+    float: left;
+    width: 85%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
 }
 
-.App-link {
-  color: #61dafb;
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+
+.Table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.Table td, .Table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.Table tr:nth-child(even){background-color: #f2f2f2;}
+
+.Table tr:hover {background-color: #ddd;}
+
+.Table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
 }
